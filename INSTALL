@@ -16,3 +16,8 @@ linking libaio.so against the provided stubs.  At runtime,
 libaio.so requires a real libredhat-kernel.so library; this
 is provided by the Red Hat kernel RPM packages with async
 I/O functionality.
+
+cross-compile for the ARM
+
+make ARCH=arm64 CC=aarch64-linux-gnu-gcc all
+sudo make prefix=/usr/aarch64-linux-gnu install

@@ -3,7 +3,7 @@ SPECFILE=$(NAME).spec
 VERSION=$(shell awk '/Version:/ { print $$2 }' $(SPECFILE))
 TAG = $(NAME)-$(VERSION)
 RPMBUILD=$(shell `which rpmbuild >&/dev/null` && echo "rpmbuild" || echo "rpm")
-
+cc=arm-linux-gnueabi-gcc
 prefix=/usr
 includedir=$(prefix)/include
 libdir=$(prefix)/lib
